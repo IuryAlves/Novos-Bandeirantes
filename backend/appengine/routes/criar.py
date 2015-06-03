@@ -57,10 +57,11 @@ class QuestForm(ModelForm):
 
 def inserir(**propriedades):
     quest_form = QuestForm(**propriedades)
-    #jogo = Game.query(Game.tit == titulo)
-    #jogos = jogo.fetch()
-    #for j in jogos:
-    #    quest_form.jog = j.key.id
+    #query = Game.query(Game.tit == titulo)
+    # if query is not None:
+    #   jogos = query.fetch()
+    #   for j in jogos:
+    #       quest_form.jog.append(j.key)
     erro = quest_form.validate()
     if erro:
             contexto={'criar_modelo': router.to_path(salvar),
